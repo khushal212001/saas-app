@@ -27,8 +27,8 @@ const NavItems = () => {
           <Link 
             href={href} 
             key={label} 
-            className={cn(pathname===href && 'text-primary font-semibold')}> 
-              {label} 
+            className={cn(pathname===href && 'text-primary font-semibold gap-2')}> 
+              {label} <br/>
           </Link>
         ))
       }
