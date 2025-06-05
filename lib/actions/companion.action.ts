@@ -18,7 +18,6 @@ export const createCompanion = async (formData: CreateCompanion) => {
     return data[0];
 }
 
-
 export const getAllCompanions = async ({ limit = 10, page = 1, subject, topic }: GetAllCompanions) => {
     const supabase = createSupabaseClient();
 
@@ -41,7 +40,7 @@ export const getAllCompanions = async ({ limit = 10, page = 1, subject, topic }:
 
     return companions;
 }
-        
+
 export const getCompanion = async (id: string) => {
     const supabase = createSupabaseClient();
 
@@ -68,7 +67,6 @@ export const addToSessionHistory = async (companionId: string) => {
 
     return data;
 }
-
 
 export const getRecentSessions = async (limit = 10) => {
     const supabase = createSupabaseClient();
