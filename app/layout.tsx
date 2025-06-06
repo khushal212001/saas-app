@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
+import { Analytics } from '@vercel/analytics/next';
+
 
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -25,6 +27,7 @@ export default function RootLayout({
       <body className={`${bricolage.variable} antialiased`}>
         <ClerkProvider appearance={{ variables: { colorPrimary: '#fe5933' }} }>
           <Navbar />
+          <Analytics />
           {children}
         </ClerkProvider>
       </body>
